@@ -1,0 +1,33 @@
+﻿services:
+  web:
+    build: .
+    ports:
+      - "7183:80"
+      - "5105:443"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - UseCloudServices=false
+    depends_on:
+      - mongodb
+      - redis
+
+  mongodb:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=sample_mflix
+
+  redis:
+    image: redis:7.0
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+
+volumes:
+  mongodb_data:
+  redis_data:
