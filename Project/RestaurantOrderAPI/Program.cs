@@ -8,14 +8,8 @@ using RestaurantOrderAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var useCloudServices = builder.Configuration.GetValue<bool>("UseCloudServices");
-var mongoConnection = useCloudServices
-    ? builder.Configuration.GetConnectionString("MongoDbConnection")
-    : builder.Configuration.GetConnectionString("LocalMongoDbConnection");
-
-var redisConnection = useCloudServices
-    ? builder.Configuration.GetConnectionString("RedisConnection")
-    : builder.Configuration.GetConnectionString("LocalRedisConnection");
+var mongoConnection = builder.Configuration.GetConnectionString("MongoDbConnection");
+var redisConnection = builder.Configuration.GetConnectionString("RedisConnection");
 
 builder.Services.AddSingleton<IMongoClient>(_ =>
 {

@@ -41,3 +41,4 @@ C:\Users\Saliha\Desktop\Project\RestaurantOrderAPI\obj\Debug\net6.0\refint\Resta
 C:\Users\Saliha\Desktop\Project\RestaurantOrderAPI\obj\Debug\net6.0\RestaurantOrderAPI.pdb
 C:\Users\Saliha\Desktop\Project\RestaurantOrderAPI\obj\Debug\net6.0\RestaurantOrderAPI.genruntimeconfig.cache
 C:\Users\Saliha\Desktop\Project\RestaurantOrderAPI\obj\Debug\net6.0\ref\RestaurantOrderAPI.dll
+C:\Users\Saliha\Desktop\Project\RestaurantOrderAPI\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
